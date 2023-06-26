@@ -1,0 +1,183 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    width: 100%;
+    height: 100vh;
+    background-image: url("../Img/pexels-john-nail-1448136.jpg");
+    background-size: cover;
+}
+
+section{
+    width: 90%;
+    border: 2px solid orange;
+    margin: 100px auto 0;
+    display: flex;
+}
+section .cont-botones{
+    width: 50%;
+    min-height: 500px;
+    text-align: center;
+    padding: 40px 20px;
+    border: solid orange;
+    backdrop-filter: blur(5px);
+}
+section .cont-figura{
+    width: 50%;
+    min-height: 500px;
+    text-align: center;
+    padding: 40px 20px;
+    border: solid orange;
+    backdrop-filter: blur(5px);
+}
+h2{
+    font-size: 20px;
+    color: green;
+    /* font-family: ;*/
+    margin-bottom: 50px;
+}
+.cont-botones button{
+    padding: 12px 30px;
+    font-size: 20px;
+    background: transparent;
+    color: aliceblue;
+    border: 2px solid #fff;
+    margin: 10px;
+}
+.cont-botones button:hover{
+    background: #fff;
+    color: green;
+}
+#figura{
+    width: 220px;
+    height: 220px;
+    background: #fff;
+    border: 2px solid green;
+    margin: 10px auto;
+    transition: 1s;
+}
+
+#figura.circulo{
+    background-repeat: no-repeat;
+    transition: 1s;
+    border-radius: 50%;
+}
+#figura.rectangulo{
+    background-repeat: no-repeat;
+    transition: 1s;
+    width: 500px;
+}
+#figura.triangulo{
+    background-repeat: no-repeat;
+    border-top: transparent;
+    background-color: transparent;
+    transition: 1s;
+    width: 0;
+    height: 0;
+    border-bottom: 200px solid green;
+    border-left: 100px solid transparent;
+    border-right: 100px solid transparent;
+
+}
+#figura.girar{
+    transition: 1s;
+    rotate: 360deg;
+}
+#figura.arriba{
+    transition: 1s;
+    transform: translateY(-200px);
+}
+#figura.abajo{
+    transition: 1s;
+    transform: translateY(200px);
+}
+#figura.izquierda{
+    transition: 1s;
+    transform: translateX(-200px);
+}
+#figura.derecha{
+    transition: 1s;
+    transform: translateX(200px);
+}
+#figura.ocultar{
+    transition: 1s;
+    opacity: 0;
+}
+#figura.gif{
+    transition: 1s;
+    width: 400px;
+    height: 300px;
+    background-image: url(../Img/giphy.gif);
+    background-size: cover;
+}
+#figura.degradado{
+    transition: 10s;
+    width: 220px;
+    height: 220px;
+    background-image: linear-gradient(to top, #78CB16, #CF3232 ,#DF6601);
+
+}
+.panelIzquierdo{
+    width: 350px;
+    height: 100vh;
+    position: absolute;
+    left: -450px;
+    top: 0;
+    z-index: 999;
+    background: black;
+    padding: 50px 40px;
+    transition: .5s;
+}
+.panelIzquierdo h3{
+    font-size: 30px;
+    color: #DF6601;
+
+}
+.panelIzquierdo ul a{
+    display: block;
+    padding: 10px 15px;
+    margin: 8px 0px;
+    max-width: 250px;
+    background: #DF6601;
+    color: white;
+}
+.panelIzquierdo.activo{
+    left: 0;
+}
+.close{
+    position: absolute;
+    right: 30px;
+    top: 25px;
+    color: #999;
+    text-decoration: none;
+    font-size: 25px;
+}
+.panelSup{
+    width: 0%;
+    height: 0vh;
+    background-size: cover;
+    position: absolute;
+    left: 0%;
+    right: 0%;
+    top: 0%;
+    bottom: 0%;
+    z-index: 999;
+    text-align: center;
+    background-image: url(../Img/giphy.gif) ;
+    background-color: #fff;
+    transition: .5s;
+}
+.panelSup.activo2{
+    width: 100%;
+    height: 100vh;
+}
+.close2{
+    position: absolute;
+    right: 10px;
+    top: 10px;
+    color: black;
+    text-decoration: none;
+    font-size: 50px;
+}
